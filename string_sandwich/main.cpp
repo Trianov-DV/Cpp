@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <memory>
 #include <exception>
 
@@ -21,7 +20,6 @@ bool isSandwich(String& str)
 		}
 		else {
 			std::cout << str.getString() << " - this string is't a sandwich\n";
-			throw std::runtime_error("########1\n");
 			return false;
 		}
 	}
