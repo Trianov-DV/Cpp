@@ -1,10 +1,5 @@
 #include <iostream>
-#include <array>
 #include <algorithm>
-#include <cmath>
-#include <ctime>
-#include <cstdlib>
-#include <cassert>
 #include <vector>
 #include <initializer_list>
 
@@ -58,6 +53,8 @@ public:
         : m_p1(point1), m_p2(point2), m_p3(point3)
     {
     }
+    
+    virtual ~Triangle() {}
 
     virtual std::ostream& print(std::ostream& out) const override
     {
@@ -80,6 +77,8 @@ public:
         : m_point(point), m_radius(radius)
     {
     }
+    
+    virtual ~Circle() {}
 
     virtual std::ostream& print(std::ostream& out) const override
     {
