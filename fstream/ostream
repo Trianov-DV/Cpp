@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	string path = "outFile.txt";
+	
+	ofstream fout;
+	fout.open(path);
+	
+	if (!fout.is_open())
+	{
+		cout << "Error open to file" << endl;
+	} 
+	else
+	{
+		fout << "It's our data. WOW";
+	}
+
+	fout.close();
+
+	return 0;
+}
