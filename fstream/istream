@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+	string path = "outFile.txt";
+	
+	/*ofstream fout;
+	fout.open(path, ofstream::app);
+	
+	if (!fout.is_open())
+	{
+		cout << "Error open to file" << endl;
+	} 
+	else
+	{
+		fout << "\n";
+		for (size_t i = 0; i < 3; i++)
+		{
+			cout << "Input a number" << endl;
+			int a;
+			cin >> a;
+			fout << a;
+			fout << "\n";
+		}
+	}
+
+	fout.close();*/
+
+	ifstream fin;
+	fin.open(path);
+
+	if (!fin.is_open())
+	{
+		cout << "File opening error" << endl;
+	}
+	else
+	{
+		string str;
+		// char ch[100];
+
+		while (!fin.eof())
+		{
+			str = "";
+			getline(fin, str);
+			// fin.getline(ch, 100);
+			cout << str << endl;
+		}
+	}
+
+	fin.close();
+	return 0;
+}
