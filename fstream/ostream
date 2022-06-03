@@ -9,7 +9,7 @@ int main()
 	string path = "outFile.txt";
 	
 	ofstream fout;
-	fout.open(path);
+	fout.open(path, ofstream::app);
 	
 	if (!fout.is_open())
 	{
@@ -17,7 +17,15 @@ int main()
 	} 
 	else
 	{
-		fout << "It's our data. WOW";
+		fout << "\n";
+		for (size_t i = 0; i < 3; i++)
+		{
+			cout << "Input a number" << endl;
+			int a;
+			cin >> a;
+			fout << a;
+			fout << "\n";
+		}
 	}
 
 	fout.close();
