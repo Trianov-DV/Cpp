@@ -13,7 +13,7 @@ int main()
 	
 	if (!fout.is_open())
 	{
-		cout << "Error open to file" << endl;
+		cout << "File opening error" << endl;
 	} 
 	else
 	{
